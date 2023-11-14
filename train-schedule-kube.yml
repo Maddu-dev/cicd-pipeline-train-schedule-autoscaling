@@ -32,6 +32,9 @@ spec:
       containers:
       - name: train-schedule
         image: linuxacademycontent/train-schedule:autoscaling
+        resources:
+          requests:
+            cpu: 200m
         ports:
         - containerPort: 8080
         livenessProbe:
